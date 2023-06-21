@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Buscar campus</title>
+	<link th:href="@{/webjars/bootstrap/4.5.3/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+
+<body>
+
+	<div th:insert="~{menuAlunos :: menu}"></div>
+
+	<div class="card" style="margin-top:48px">
+
+		<h1 class="card-header text-center font-weight-bold text-uppercase py-4">Busca por campus</h1>
+
+		<div class="card-body">
+			<form class="form-inline" method="POST" action="#" th:action="@{/buscarCampus}" style="margin: 20px">
+				<div class="card-body">
+					<input class="form-control mr-sm-2" type="search" placeholder="Buscar por campus" aria-label="Search"
+						name="searchTerm" id="searchTerm" list="Aluno_Search">
+					<button type="submit" class="btn btn-primary btn-rounded">Salvar</button>
+				</div>
+			</form>
+			<a href="/index" class="btn btn-secondary">Voltar</a>
+		</div>
+	</div>
+
+</body>
+
+</html>
